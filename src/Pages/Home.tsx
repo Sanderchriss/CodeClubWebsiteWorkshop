@@ -17,7 +17,7 @@ export default function Home() {
                 <Typography variant="body1" paragraph>
                     At C1pher Inc., we don’t just ride the Information Superhighway - we paved it. Since 1991, we’ve been pushing the boundaries of technology with our cutting-edge 14.4K modems, revolutionary 16-bit software, and groundbreaking 256-color graphics.
                 </Typography>
-                <img src="ofiice.jpeg"/>
+                <img src="/ofiice.jpeg"/>
                 <br/>
                 <Button
                     variant="contained"
