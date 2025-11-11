@@ -12,13 +12,6 @@ jobs:
       id-token: write # to verify the deployment originates from an appropriate
       pages: write # to deploy to Pages
       contents: read # to checkout private repositories
-
-    env:
-      MAPBOX_TOKEN: ${{ secrets.MAPBOX_TOKEN }}
-      STADIA_TOKEN: ${{ secrets.STADIA_TOKEN }}
-      SAT_API_KEY: ${{ secrets.SAT_API_KEY }}
-
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
