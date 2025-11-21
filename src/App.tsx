@@ -30,9 +30,9 @@ export default function App() {
                     }}
                 >
                     <Routes>
-                        <Route path="/CodeClubWebsiteWorkshop/" element={<Home />} />
-                        <Route path="/CodeClubWebsiteWorkshop/about" element={<About />} />
-                        <Route path="/CodeClubWebsiteWorkshop/services" element={<Services />} />
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="CodeClubWebsiteWorkshop/services" element={<Services />} />
                         <Route path="/CodeClubWebsiteWorkshop/contact" element={<Contact />} />
                     </Routes>
 
