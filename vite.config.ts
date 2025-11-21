@@ -1,3 +1,3 @@
-export default {
-    base: "/CodeClubWebsiteWorkshop/",
-};
+/*export default {
+    base: "/",
+};*/
