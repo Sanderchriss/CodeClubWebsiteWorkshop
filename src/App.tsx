@@ -32,8 +32,8 @@ export default function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
-                        <Route path="CodeClubWebsiteWorkshop/services" element={<Services />} />
-                        <Route path="/CodeClubWebsiteWorkshop/contact" element={<Contact />} />
+                        <Route path="/services" element={<Services />} />
+                        <Route path="/contact" element={<Contact />} />
                     </Routes>
 
                 </Paper>
