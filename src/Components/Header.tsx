@@ -1,45 +1,32 @@
 // src/components/Header.tsx
-import { AppBar, Toolbar, Button, Typography, Box } from '@mui/material';
+import {AppBar, Toolbar, Button, Typography, Container, Box} from '@mui/material';
 import { Link } from 'react-router-dom';
-import {ClippyProvider, useClippy} from "@react95/clippy";
 
-const MyComponent = () => {
-    const { clippy } = useClippy();
-    const handleClick = () => {
-        if (clippy) {
-            clippy.play('Wave');
-        }
-    };
-    return <Button onClick={handleClick}>Hello Clippy!</Button>;
-};
 export default function Header() {
     return (
-        <AppBar position="static">
-            <Toolbar sx={{ justifyContent: 'space-between' }}>
-
-                    <img src = "oldComp.png"/>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                        C1pher Incorporated
+        <AppBar position="static" color="primary">
+            <Container maxWidth="lg">
+                <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <img src="/C3Logo.png" alt="CBS Logo" width={100} height={100}/>
+                    <Typography variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
+                        CBS Code Club
                     </Typography>
-
-                <Box>
-                    <ClippyProvider>
-                        <MyComponent />
-                    </ClippyProvider>
-                    <Button color="inherit" component={Link} to="/">
-                        Home
-                    </Button>
-                    <Button color="inherit" component={Link} to="/about">
-                        About
-                    </Button>
-                    <Button color="inherit" component={Link} to="/services">
-                        Services
-                    </Button>
-                    <Button color="inherit" component={Link} to="/contact">
-                        Contact
-                    </Button>
-                </Box>
-            </Toolbar>
+                    <Box>
+                        <Button color="inherit" component={Link} to="/">
+                            Home
+                        </Button>
+                        <Button color="inherit" component={Link} to="/about">
+                            About
+                        </Button>
+                        <Button color="inherit" component={Link} to="/projects">
+                            Projects
+                        </Button>
+                        <Button color="inherit" component={Link} to="/join">
+                            Join Us
+                        </Button>
+                    </Box>
+                </Toolbar>
+            </Container>
         </AppBar>
     );
 }

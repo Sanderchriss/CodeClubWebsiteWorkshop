@@ -1,63 +1,70 @@
+// src/theme.ts
+import {createTheme} from "@mui/material";
 
-import { createTheme } from '@mui/material/styles';
-
-const windows95Theme = createTheme({
+export const modernTheme = createTheme({
     palette: {
+        mode: 'light',
         primary: {
-            main: '#000080', // Windows 95 blue
+            main: '#1C1C1C', // Dark gray/black for text and primary elements
         },
         secondary: {
-            main: '#C0C0C0', // Light grey
+            main: '#FF0031', // Bright red for accents
         },
         background: {
-            default: '#008080', // Teal desktop background
-            paper: '#C0C0C0',    // Light grey for windows
+            default: '#EEEEEE', // Light gray for the page background
+            paper: '#FFFFFF',   // White for cards/papers
         },
         text: {
-            primary: '#000000',
-            secondary: '#FFFFFF',
+            primary: '#1C1C1C', // Dark text
+            secondary: '#666666',
         },
     },
     typography: {
-        fontFamily: '"MS Sans Serif", "Arial", sans-serif',
+        fontFamily: '"IBM Plex Sans", sans-serif',
+        h1: {
+            fontFamily: '"IBM Plex Mono", monospace',
+            fontWeight: 700,
+            fontSize: '2.5rem',
+            letterSpacing: '0.1em',
+        },
+        h2: {
+            fontFamily: '"IBM Plex Mono", monospace',
+            fontWeight: 600,
+            fontSize: '2rem',
+            letterSpacing: '0.05em',
+        },
+        body1: {
+            fontFamily: '"IBM Plex Sans", sans-serif',
+            fontSize: '1rem',
+            lineHeight: 1.6,
+        },
+
     },
     components: {
         MuiButton: {
             styleOverrides: {
                 root: {
-                    border: '2px solid',
-                    borderColor: '#FFFFFF #808080 #808080 #FFFFFF',
-                    backgroundColor: '#C0C0C0',
-                    color: '#000000',
-                    boxShadow: 'none',
-                    '&:hover': {
-                        backgroundColor: '#000080',
-                        color: '#FFFFFF',
-                        borderColor: '#FFFFFF',
-                    },
+                    borderRadius: '4px',
+                    textTransform: 'none',
+                    padding: '8px 16px',
                 },
             },
         },
         MuiPaper: {
             styleOverrides: {
                 root: {
-                    border: '2px solid',
-                    borderColor: '#FFFFFF #808080 #808080 #FFFFFF',
-                    boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)',
-                    backgroundColor: '#C0C0C0',
+                    borderRadius: '8px',
+                    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
                 },
             },
         },
         MuiAppBar: {
             styleOverrides: {
                 root: {
-                    background: 'linear-gradient(to right, #000080, #1084d0)',
-                    color: '#FFFFFF',
-                    borderBottom: '2px solid #FFFFFF',
+                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
                 },
             },
         },
     },
 });
-
-export default windows95Theme;
+export default modernTheme

@@ -1,42 +1,26 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {Box, Paper} from '@mui/material';
+// src/App.tsx
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Container, Box } from '@mui/material';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Home from './Pages/Home';
 import About from './Pages/About';
-import Services from './Pages/Services';
-import Contact from './Pages/Contact';
-
+import Join from "./Pages/Contact";
+import Projects from "./Pages/Services";
 
 export default function App() {
     return (
         <Router>
-            <Box
-                sx={{
-                    width: '100%',
-                    minHeight: '100vh',
-                    backgroundColor: 'background.default',
-                    display: 'flex',
-                    flexDirection: 'column',
-                }}
-            >
+            <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
                 <Header />
-                <Paper
-                    sx={{
-                        flex: 1,
-                        width: '80%',
-                        margin: '20px auto',
-                        padding: '20px',
-                    }}
-                >
+                <Container maxWidth="lg" sx={{ flex: 1, py: 4 }}>
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
-                        <Route path="/services" element={<Services />} />
-                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/join" element={<Join />} />
                     </Routes>
-
-                </Paper>
+                </Container>
                 <Footer />
             </Box>
         </Router>
