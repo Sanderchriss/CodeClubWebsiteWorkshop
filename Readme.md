@@ -1,4 +1,6 @@
 # CodeClubWebsiteWorkshop
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a4d0104b-52cd-4206-82df-defe9ee73914/deploy-status)](https://app.netlify.com/projects/codeclub-website/deploys)
+
 Link to Website:
 
 To run the code locally, run:
